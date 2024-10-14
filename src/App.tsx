@@ -34,6 +34,7 @@ function App() {
   const clickHandler3 = (name: string, e: React.MouseEvent<HTMLButtonElement>) => {
     console.log('点击事件3', name, e)
   }
+  let type = 0
   return (
     <div className="App">
       <h1>JSX</h1>
@@ -57,6 +58,12 @@ function App() {
       {test(0)}
       {test(1)}
       {test(2)}
+
+      <hr/>
+      {test(type)}
+      { type !== 1 && type !== 2 && <div>无图1</div>}
+      { type === 1 && <div>单图1</div>}
+      { type === 2 && <div>多图1</div>}
 
       <h1>事件绑定</h1>
       <button onClick={clickHandler}>点我</button>
