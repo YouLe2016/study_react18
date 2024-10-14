@@ -9,6 +9,19 @@ const list = [
 
 const flag = true
 
+function test(type: number) {
+  switch (type) {
+    case 0:
+      return <div>无图</div>
+    case 1:
+      return <div>单图</div>
+    case 2:
+      return (<div>多图</div>)
+    default:
+      return <div>无图</div>
+  }
+}
+
 function App() {
   return (
     <div className="App">
@@ -29,6 +42,10 @@ function App() {
       {flag ? <div>已登录1</div> : <div>未登录1</div>}
       <div>{ flag ? '已登录2' : '未登录2'}</div>
 
+      <h2>复杂条件渲染</h2>
+      {test(0)}
+      {test(1)}
+      {test(2)}
     </div>
   );
 }
