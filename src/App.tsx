@@ -7,6 +7,8 @@ const list = [
   {id:1003, name: 'Angular'}
 ]
 
+const flag = true
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,15 @@ function App() {
           <li key={item.id}>{item.name}</li>
         )}
       </ul>
+
+      <h2>条件渲染</h2>
+      {/*逻辑与*/}
+      {flag && <div>已登录</div>}
+
+      {/*三目运算符*/}
+      {flag ? <div>已登录1</div> : <div>未登录1</div>}
+      <div>{ flag ? '已登录2' : '未登录2'}</div>
+
     </div>
   );
 }
