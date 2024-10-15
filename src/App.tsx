@@ -2,6 +2,7 @@
 //App --> index.js --> public/index.html(root)
 
 import React from "react";
+import StudyUseState from "./study_part/StudyUseState";
 
 const list = [
   {id: 1001, name: 'Vue'},
@@ -84,6 +85,7 @@ function App() {
       {/* 成对标签 */}
       <MyButton></MyButton>
 
+      <StudyUseState></StudyUseState>
     </div>
   );
 }
