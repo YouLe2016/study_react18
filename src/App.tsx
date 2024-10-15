@@ -24,6 +24,12 @@ function test(type: number) {
   }
 }
 
+function MyButton() {
+  return (
+      <button onClick={() => console.log('点击MyButton 事件')}>点我</button>
+  )
+}
+
 function App() {
   const clickHandler = () => {
     console.log('点击事件')
@@ -61,9 +67,9 @@ function App() {
 
       <hr/>
       {test(type)}
-      { type !== 1 && type !== 2 && <div>无图1</div>}
-      { type === 1 && <div>单图1</div>}
-      { type === 2 && <div>多图1</div>}
+      {type !== 1 && type !== 2 && <div>无图1</div>}
+      {type === 1 && <div>单图1</div>}
+      {type === 2 && <div>多图1</div>}
 
       <h1>事件绑定</h1>
       <button onClick={clickHandler}>点我</button>
@@ -71,6 +77,13 @@ function App() {
       <button onClick={clickHandler2}>点我</button>
       {/*自定义参数*/}
       <button onClick={(e) => clickHandler3('小白', e)}>点我</button>
+
+      <h1>组件基础使用</h1>
+      {/* 自闭合 */}
+      <MyButton/>
+      {/* 成对标签 */}
+      <MyButton></MyButton>
+
     </div>
   );
 }
