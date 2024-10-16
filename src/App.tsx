@@ -3,6 +3,7 @@
 
 import React from "react";
 import StudyUseState from "./study_part/StudyUseState";
+import StudyBaseStyle from "./study_part/base_style/StudyBaseStyle";
 
 const list = [
   {id: 1001, name: 'Vue'},
@@ -86,6 +87,7 @@ function App() {
       <MyButton></MyButton>
 
       <StudyUseState></StudyUseState>
+      <StudyBaseStyle/>
     </div>
   );
 }

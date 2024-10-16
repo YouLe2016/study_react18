@@ -27,7 +27,7 @@ function StudyUseState() {
     })
   }
   return <div>
-    <h2>useState</h2>
+    <h2>1、useState</h2>
     <div>{ count }</div>
     <button onClick={add}>+1</button>
     <hr/>
